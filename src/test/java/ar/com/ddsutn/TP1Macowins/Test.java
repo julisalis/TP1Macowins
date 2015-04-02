@@ -23,7 +23,7 @@ public class Test {
 		Negocio negocio = new Negocio();
 		negocio.getVentas().add(venta1);
 		negocio.getVentas().add(venta2);
-		System.out.println(negocio.gananciaDe(02042015));
+		System.out.println(negocio.gananciaDe(01042015));
 		
 	}
 }
