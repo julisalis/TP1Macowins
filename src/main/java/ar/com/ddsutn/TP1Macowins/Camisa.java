@@ -4,7 +4,7 @@ public class Camisa extends Prenda{
 	
 	@Override
 	protected int precioBase(){
-		return 30;
+		return 200;
 	}
 
 }

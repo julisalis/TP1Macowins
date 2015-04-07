@@ -4,6 +4,6 @@ public class Saco extends Prenda{
 	
 	@Override
 	protected int precioBase(){
-		return 10;
+		return 300;
 	}
 }
