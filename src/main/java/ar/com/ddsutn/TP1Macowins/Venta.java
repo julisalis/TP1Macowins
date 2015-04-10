@@ -1,10 +1,11 @@
 package ar.com.ddsutn.TP1Macowins;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collection;
 
 public class Venta {
-	private int fecha;
+	private LocalDate fecha;
 	private Collection<Prenda> prendas;
 	
 	public Venta(){
@@ -19,7 +20,7 @@ public class Venta {
 		return valorFinal;
 	}
 	
-	public boolean sosDe(int fechaVenta){
+	public boolean sosDe(LocalDate fechaVenta){
 		return getFecha() == fechaVenta;
 	}
 
@@ -31,11 +32,11 @@ public class Venta {
 		this.prendas = prendas;
 	}
 
-	public int getFecha() {
+	public LocalDate getFecha() {
 		return fecha;
 	}
 
-	public void setFecha(int fecha) {
+	public void setFecha(LocalDate fecha) {
 		this.fecha = fecha;
 	}
 

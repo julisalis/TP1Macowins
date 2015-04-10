@@ -1,5 +1,6 @@
 package ar.com.ddsutn.TP1Macowins;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -12,12 +13,12 @@ public class Negocio {
 		setVentas(new ArrayList<Venta>());
 	}
 	
-	public List<Venta> ventasDe(int fechaVenta){
+	public List<Venta> ventasDe(LocalDate fechaVenta){
 		List<Venta> ventasDeFecha = getVentas().stream().filter(v -> v.sosDe(fechaVenta)).collect(Collectors.toList());
 		return ventasDeFecha;
 	}
 	
-	public double gananciaDe(int fechaVenta){
+	public double gananciaDe(LocalDate fechaVenta){
 		List<Venta> listaVentas = this.ventasDe(fechaVenta);
 		double gananciaFinal = 0.0;
 		for (Venta venta : listaVentas){

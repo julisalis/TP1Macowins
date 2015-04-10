@@ -1,11 +1,10 @@
 package ar.com.ddsutn.TP1Macowins;
 
 public abstract class Prenda {
-	private static int valorFijo;
+	private static int valorFijo = 100;
 	private Origen origen;
 	
 	public Prenda(){
-		valorFijo = 100;
 	}
 	
 	public double precioFinal(){

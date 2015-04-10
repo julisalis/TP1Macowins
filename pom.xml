@@ -5,6 +5,10 @@
   <groupId>ar.com.ddsutn</groupId>
   <artifactId>TP1Macowins</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <configuration>
+	  <source>1.8</source>
+	  <target>1.8</target>
+  </configuration>
   <packaging>jar</packaging>
 
   <name>TP1Macowins</name>
