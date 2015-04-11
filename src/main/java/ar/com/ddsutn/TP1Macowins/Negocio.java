@@ -14,16 +14,13 @@ public class Negocio {
 	}
 	
 	public List<Venta> ventasDe(LocalDate fechaVenta){
-		List<Venta> ventasDeFecha = getVentas().stream().filter(v -> v.sosDe(fechaVenta)).collect(Collectors.toList());
+		List<Venta> ventasDeFecha = getVentas().stream().filter(venta -> venta.sosDe(fechaVenta)).collect(Collectors.toList());
 		return ventasDeFecha;
 	}
 	
 	public double gananciaDe(LocalDate fechaVenta){
 		List<Venta> listaVentas = this.ventasDe(fechaVenta);
-		double gananciaFinal = 0.0;
-		for (Venta venta : listaVentas){
-			gananciaFinal += venta.valorVenta();
-		}
+		double gananciaFinal = listaVentas.stream().mapToDouble(venta -> venta.valorVenta()).sum();
 		return gananciaFinal;
 	}
 
