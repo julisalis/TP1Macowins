@@ -9,7 +9,7 @@ public abstract class Prenda {
 	}
 	
 	public double precioFinal(){
-		return ((double)valorFijo + (double)this.precioBase()) * (getOrigen().tasaImp() * marca.coeficiente(this.precioBase()));
+		return ((double)valorFijo + (double)this.precioBase()) * (getOrigen().tasaImp() * getMarca().coeficiente(this.precioBase()));
 	}
 	
 	protected abstract double precioBase();
@@ -20,6 +20,14 @@ public abstract class Prenda {
 
 	public void setOrigen(Origen origen) {
 		this.origen = origen;
+	}
+
+	public Marca getMarca() {
+		return marca;
+	}
+
+	public void setMarca(Marca marca) {
+		this.marca = marca;
 	}
 
 }

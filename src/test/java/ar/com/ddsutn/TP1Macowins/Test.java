@@ -4,12 +4,16 @@ import java.time.LocalDate;
 
 public class Test {
 	public static void main (String[] args){
-		Saco saco = new Saco();
+		Armani armani = new Armani();
+		
+		Saco saco = new Saco(2);
 		Importado importado = new Importado();
 		saco.setOrigen(importado);
-		Pantalon pantalon = new Pantalon();
+		saco.setMarca(armani);
+		Pantalon pantalon = new Pantalon(25);
 		Nacional nacional = new Nacional();
 		pantalon.setOrigen(nacional);
+		pantalon.setMarca(armani);
 		
 		Venta venta1 = new Venta();
 		venta1.getPrendas().add(saco);
