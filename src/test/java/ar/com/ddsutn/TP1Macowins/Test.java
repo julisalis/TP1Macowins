@@ -4,16 +4,9 @@ import java.time.LocalDate;
 
 public class Test {
 	public static void main (String[] args){
-		Armani armani = new Armani();
 		
-		Saco saco = new Saco(2);
-		Importado importado = new Importado();
-		saco.setOrigen(importado);
-		saco.setMarca(armani);
-		Pantalon pantalon = new Pantalon(25);
-		Nacional nacional = new Nacional();
-		pantalon.setOrigen(nacional);
-		pantalon.setMarca(armani);
+		Saco saco = new Saco(new Importado(),new Armani(),2);
+		Pantalon pantalon = new Pantalon(new Nacional(),new Armani(),25);
 		
 		Venta venta1 = new Venta();
 		venta1.getPrendas().add(saco);
@@ -29,7 +22,7 @@ public class Test {
 		Negocio negocio = new Negocio();
 		negocio.getVentas().add(venta1);
 		negocio.getVentas().add(venta2);
-		System.out.println(negocio.gananciaDe(LocalDate.of(2015,04,01)));
+		System.out.println(negocio.gananciaDe(LocalDate.of(2015,04,02)));
 		
 	}
 }

@@ -1,7 +1,7 @@
 package ar.com.ddsutn.TP1Macowins;
 
 public abstract class Prenda {
-	private static int valorFijo = 100;
+	private static int valorFijo = 50;
 	private Origen origen;
 	private Marca marca;
 	

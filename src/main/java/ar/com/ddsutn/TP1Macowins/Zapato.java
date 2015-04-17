@@ -5,8 +5,10 @@ public class Zapato extends Prenda{
 	private int talle;
 	
 	
-	public Zapato(int talle){
+	public Zapato(Origen origen,Marca marca,int talle){
 		this.talle = talle;
+		this.setMarca(marca);
+		this.setOrigen(origen);
 	}
 	@Override
 	protected double precioBase(){
