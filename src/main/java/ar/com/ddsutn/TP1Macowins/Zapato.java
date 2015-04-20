@@ -1,18 +1,17 @@
 package ar.com.ddsutn.TP1Macowins;
 
-public class Zapato extends Prenda{
+public class Zapato extends Prenda {
 
 	private int talle;
-	
-	
-	public Zapato(Origen origen,Marca marca,int talle){
+
+	public Zapato(Origen origen, Marca marca, int talle) {
+		super(origen, marca);
 		this.talle = talle;
-		this.setMarca(marca);
-		this.setOrigen(origen);
 	}
+
 	@Override
-	protected double precioBase(){
-		return 400+5*talle;
+	protected double precioBase() {
+		return 400 + 5 * talle;
 	}
-	
+
 }

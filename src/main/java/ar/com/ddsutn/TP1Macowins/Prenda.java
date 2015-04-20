@@ -5,7 +5,9 @@ public abstract class Prenda {
 	private Origen origen;
 	private Marca marca;
 	
-	public Prenda(){
+	public Prenda(Origen origen, Marca marca){
+		this.setOrigen(origen);
+		this.setMarca(marca);
 	}
 	
 	public double precioFinal(){

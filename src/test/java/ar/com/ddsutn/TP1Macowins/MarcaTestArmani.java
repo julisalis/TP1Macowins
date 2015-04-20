@@ -6,21 +6,20 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class MarcaTestArmani {
-	
+
 	private Armani armani;
-	
+
 	@Before
-	public void setup(){
-		armani= new Armani();
+	public void setup() {
+		armani = new Armani();
 	}
-	
 
 	@Test
-	public void coeficienteDeMarcaArmaniEsElCorrecto(){	
-		//Operaciones
+	public void coeficienteDeMarcaArmaniEsElCorrecto() {
+		// Operaciones
 		Double coeficiente = armani.coeficiente(500.0);
-		//Postcondicion
-		assertEquals((Double)1.65,coeficiente);
+		// Postcondicion
+		assertEquals(1.65, coeficiente, 0);
 	}
 
 }
