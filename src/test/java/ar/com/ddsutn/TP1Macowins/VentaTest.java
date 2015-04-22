@@ -19,7 +19,7 @@ public class VentaTest {
 	private Origen origen;
 	private Camisa camisa;
 	private Zapato zapato;
-	
+
 	private ArrayList<Prenda> prendas;
 	private Venta venta1;
 
@@ -27,14 +27,14 @@ public class VentaTest {
 	public void setup() {
 		marca = mock(Marca.class);
 		origen = mock(Origen.class);
-		
-		camisa = new Camisa (origen, marca);
-		zapato = new Zapato (origen, marca, 38);
+
+		camisa = new Camisa(origen, marca);
+		zapato = new Zapato(origen, marca, 38);
 		prendas = new ArrayList<Prenda>();
-			
+
 		prendas.add(camisa);
 		prendas.add(zapato);
-		venta1 = new Venta(LocalDate.of(2015,04,21), prendas);
+		venta1 = new Venta(LocalDate.of(2015, 04, 21), prendas);
 
 	}
 
@@ -49,6 +49,5 @@ public class VentaTest {
 		verify(marca, times(2)).coeficiente(anyDouble());
 		verify(origen, times(2)).tasaImp();
 	}
-	
 
 }
