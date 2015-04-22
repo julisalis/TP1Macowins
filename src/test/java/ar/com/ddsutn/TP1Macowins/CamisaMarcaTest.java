@@ -22,7 +22,7 @@ public class CamisaMarcaTest {
 
 		when(marca.coeficiente(anyDouble())).thenReturn(1.0);
 
-		assertEquals(250.0, camisaNacional.precioFinal(), 0);
+		assertEquals(300.0, camisaNacional.precioFinal(), 0);
 
 		verify(marca, times(1)).coeficiente(anyDouble());
 	}

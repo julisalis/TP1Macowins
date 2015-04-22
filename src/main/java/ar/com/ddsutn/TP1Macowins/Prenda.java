@@ -1,35 +1,20 @@
 package ar.com.ddsutn.TP1Macowins;
 
 public abstract class Prenda {
-	private static int valorFijo = 50;
+	private static double valorFijo = 100;
 	private Origen origen;
 	private Marca marca;
 	
 	public Prenda(Origen origen, Marca marca){
-		this.setOrigen(origen);
-		this.setMarca(marca);
+		this.origen = origen;
+		this.marca = marca;
 	}
 	
 	public double precioFinal(){
-		return ((double)valorFijo + (double)this.precioBase()) * (getOrigen().tasaImp() * getMarca().coeficiente(this.precioBase()));
+		return ((valorFijo + (this.precioBase())) * (this.origen.tasaImp() * this.marca.coeficiente(this.precioBase())));
 	}
 	
 	protected abstract double precioBase();
 
-	public Origen getOrigen() {
-		return origen;
-	}
-
-	public void setOrigen(Origen origen) {
-		this.origen = origen;
-	}
-
-	public Marca getMarca() {
-		return marca;
-	}
-
-	public void setMarca(Marca marca) {
-		this.marca = marca;
-	}
 
 }

@@ -4,13 +4,10 @@ public class Sarkany implements Marca{
 
 	@Override
 	public double coeficiente(double precioBase) {
-		if (precioBase>500){
-			return 1.35;
-		}
-		else{
-			return 1.1;
-		}
+		
+		return (precioBase>500) ? 1.35 : 1.1;
 	}
 
 	
 }
+

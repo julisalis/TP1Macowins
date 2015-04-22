@@ -2,9 +2,9 @@ package ar.com.ddsutn.TP1Macowins;
 
 public class Saco extends Prenda {
 
-	private int cantBotones;
+	private double cantBotones;
 
-	public Saco(Origen origen, Marca marca, int cantBotones) {
+	public Saco(Origen origen, Marca marca, double cantBotones) {
 		super(origen, marca);
 		this.cantBotones = cantBotones;
 	}
