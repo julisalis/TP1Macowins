@@ -68,10 +68,10 @@ public class NegocioTest {
 		when(marca.coeficiente(anyDouble())).thenReturn(1.0);
 		when(origen.tasaImp()).thenReturn(1.0);
 
-		assertEquals(1633.5, macowins.gananciaDe(LocalDate.of(2015, 04, 22)), 0);
+		assertEquals(2062.0, macowins.gananciaDe(LocalDate.of(2015, 04, 22)), 0);
 
-		verify(marca, times(7)).coeficiente(anyDouble());
-		verify(origen, times(7)).tasaImp();
+		verify(marca, times(5)).coeficiente(anyDouble());
+		verify(origen, times(5)).tasaImp();
 	}
 
 }

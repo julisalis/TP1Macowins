@@ -20,7 +20,7 @@ public class Venta {
 	}
 
 	public boolean sosDe(LocalDate fechaVenta) {
-		return this.fecha == fechaVenta;
+		return this.fecha.equals(fechaVenta);
 	}
 
 }
